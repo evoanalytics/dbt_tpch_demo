@@ -1,0 +1,61 @@
+version: 2
+
+sources:
+  - name: tpch
+    schema: "{{ var('tpch_schema', 'tpch') }}" # you will need to customize if your schema name is not tpch
+    database: "{{ var('tpch_database', target.database) }}"
+    # loader: jet_analytics
+    # loaded_at_field: _jet_synced
+    # freshness:
+    #   warn_after: {count: 24, period: hour}
+    #   error_after: {count: 48, period: hour}
+
+    tables:
+      - name: customer
+        description: Table detailing all accounting books set up in tpch.
+        columns:
+          - name: internal_id
+            description: The unique identifier of the accounting book.
+
+      - name: lineitem
+        description: Table detailing all accounting books set up in tpch.
+        columns:
+          - name: internal_id
+            description: The unique identifier of the accounting book.
+
+      - name: nation
+        description: Table detailing all accounting books set up in tpch.
+        columns:
+          - name: internal_id
+            description: The unique identifier of the accounting book.
+
+      - name: orders
+        description: Table detailing all accounting books set up in tpch.
+        columns:
+          - name: internal_id
+            description: The unique identifier of the accounting book.
+
+      - name: part
+        description: Table detailing all accounting books set up in tpch.
+        columns:
+          - name: internal_id
+            description: The unique identifier of the accounting book.
+
+      - name: partsupp
+        description: Table detailing all accounting books set up in tpch.
+        columns:
+          - name: internal_id
+            description: The unique identifier of the accounting book.
+
+      - name: region
+        description: Table detailing all accounting books set up in tpch.
+        columns:
+          - name: internal_id
+            description: The unique identifier of the accounting book.
+
+      - name: supplier
+        description: Table detailing all accounting books set up in tpch.
+        columns:
+          - name: internal_id
+            description: The unique identifier of the accounting book.
+            

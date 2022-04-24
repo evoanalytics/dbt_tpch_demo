@@ -44,5 +44,8 @@ models:
       +materialized: table
 
 vars:
+
+  tpch_database: ''
+  tpch_schema: 'samples.tpch'
   
   
