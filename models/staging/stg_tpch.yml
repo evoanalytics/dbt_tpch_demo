@@ -1,0 +1,20 @@
+version: 2
+
+models:
+    - name: stg_tpch__customers
+      description: "A starter dbt model"
+      columns:
+          - name: c_custkey
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: stg_tpch__nations
+      description: "A starter dbt model"
+      columns:
+          - name: n_nationkey
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null

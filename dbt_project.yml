@@ -47,5 +47,24 @@ vars:
 
   tpch_database: ''
   tpch_schema: 'samples.tpch'
+
+  customers: "{{ source('tpch','customer') }}"
+  lineitems: "{{ source('tpch','lineitem') }}"
+  nations: "{{ source('tpch','nation') }}"
+  orders: "{{ source('tpch','orders') }}"
+  parts: "{{ source('tpch','part') }}"
+  partsupps: "{{ source('tpch','partsupp') }}"
+  regions: "{{ source('tpch','region') }}"
+  suppliers: "{{ source('tpch','supplier') }}"
+
+  accounting_periods_pass_through_columns: []
+  customers_pass_through_columns: []
+  lineitems_pass_through_columns: []
+  nations_pass_through_columns: []
+  orders_pass_through_columns: []
+  parts_pass_through_columns: []
+  partsupps_pass_through_columns: []
+  regions_pass_through_columns: []
+  suppliers_pass_through_columns: []
   
   
