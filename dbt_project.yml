@@ -74,16 +74,15 @@ vars:
   load_date: '1992-01-08'
   tpch_size: 10 #1, 10, 100, 1000, 10000
 
-  customers: "{{ source('tpch','customer') }}"
-  lineitems: "{{ source('tpch','lineitem') }}"
-  nations: "{{ source('tpch','nation') }}"
-  orders: "{{ source('tpch','orders') }}"
-  parts: "{{ source('tpch','part') }}"
-  partsupps: "{{ source('tpch','partsupp') }}"
-  regions: "{{ source('tpch','region') }}"
-  suppliers: "{{ source('tpch','supplier') }}"
+  customers: "{{ source('tpch_sample','customer') }}"
+  lineitems: "{{ source('tpch_sample','lineitem') }}"
+  nations: "{{ source('tpch_sample','nation') }}"
+  orders: "{{ source('tpch_sample','orders') }}"
+  parts: "{{ source('tpch_sample','part') }}"
+  partsupps: "{{ source('tpch_sample','partsupp') }}"
+  regions: "{{ source('tpch_sample','region') }}"
+  suppliers: "{{ source('tpch_sample','supplier') }}"
 
-  accounting_periods_pass_through_columns: []
   customers_pass_through_columns: []
   lineitems_pass_through_columns: []
   nations_pass_through_columns: []

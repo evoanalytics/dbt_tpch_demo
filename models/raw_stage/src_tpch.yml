@@ -1,8 +1,8 @@
 version: 2
 
 sources:
-  - name: tpch
-    schema: "{{ var('tpch_schema', 'tpch') }}" # you will need to customize if your schema name is not tpch
+  - name: tpch_sample
+    schema: "{{ var('tpch_schema', 'tpch_sample') }}" # you will need to customize if your schema name is not tpch
     database: "{{ var('tpch_database', target.database) }}"
     # loader: jet_analytics
     # loaded_at_field: _jet_synced
