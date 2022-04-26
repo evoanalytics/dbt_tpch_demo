@@ -40,15 +40,39 @@ models:
   tpch_demo:
     marts:
       +meterialized: view
-    staging:
+    raw_stage:
+      +tags:
+        - 'raw'
       +materialized: view
-    vault:
-      +materialized: table
+    stage:
+      +tags:
+        - 'stage'
+      +enabled: true
+      +materialized: view
+    raw_vault:
+      +tags:
+        - 'raw_vault'
+      +materialized: incremental
+      hubs:
+        +tags:
+          - 'hub'
+      links:
+        +tags:
+          - 'link'
+      sats:
+        +tags:
+          - 'satellite'
+      t_links:
+        +tags:
+          - 't_link'
 
 vars:
 
   tpch_database: ''
   tpch_schema: 'samples.tpch'
+
+  load_date: '1992-01-08'
+  tpch_size: 10 #1, 10, 100, 1000, 10000
 
   customers: "{{ source('tpch','customer') }}"
   lineitems: "{{ source('tpch','lineitem') }}"
@@ -68,5 +92,3 @@ vars:
   partsupps_pass_through_columns: []
   regions_pass_through_columns: []
   suppliers_pass_through_columns: []
-  
-  

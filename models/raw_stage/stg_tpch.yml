@@ -1,7 +1,7 @@
 version: 2
 
 models:
-    - name: stg_tpch__customers
+    - name: stg_tpch__customers_tmp
       description: "A starter dbt model"
       columns:
           - name: c_custkey
@@ -10,7 +10,7 @@ models:
                 - unique
                 - not_null
 
-    - name: stg_tpch__nations
+    - name: stg_tpch__nations_tmp
       description: "A starter dbt model"
       columns:
           - name: n_nationkey
